@@ -35,7 +35,20 @@ poetry run pytest --cov=src --cov-report=term-missing
 - `src/processing.py` — фильтр и сортировка операций
 - `src/generators.py` — генераторы для работы с транзакциями
 - `src/decorators.py` — декоратор логирования
+- `src/utils.py` — загрузка транзакций из JSON
+- `src/external_api.py` — конвертация валют через API
+- `data/operations.json` — данные о транзакциях
 - `tests/` — тесты для всех функций
+
+## Настройка API
+
+Скопируйте `.env.example` в `.env` и укажите ключ:
+
+```bash
+cp .env.example .env
+```
+
+Ключ можно получить на https://apilayer.com/exchangerates_data-api
 
 ## Модуль decorators
 
