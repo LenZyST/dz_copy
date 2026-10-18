@@ -34,7 +34,20 @@ poetry run pytest --cov=src --cov-report=term-missing
 - `src/widget.py` — маскировка строки и формат даты
 - `src/processing.py` — фильтр и сортировка операций
 - `src/generators.py` — генераторы для работы с транзакциями
+- `src/decorators.py` — декоратор логирования
 - `tests/` — тесты для всех функций
+
+## Модуль decorators
+
+```python
+from src.decorators import log
+
+@log(filename="mylog.txt")
+def my_function(x, y):
+    return x + y
+
+my_function(1, 2)
+```
 
 ## Модуль generators
 
