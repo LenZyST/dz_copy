@@ -25,3 +25,41 @@ def sample_operations() -> list[dict[str, int | str]]:
             "date": "2018-10-14T08:21:33.419441",
         },
     ]
+
+
+@pytest.fixture
+def sample_transactions() -> list[dict]:
+    return [
+        {
+            "id": 1,
+            "operationAmount": {
+                "amount": "100.00",
+                "currency": {"code": "USD"},
+            },
+            "description": "Перевод организации",
+        },
+        {
+            "id": 2,
+            "operationAmount": {
+                "amount": "200.00",
+                "currency": {"code": "USD"},
+            },
+            "description": "Перевод со счета на счет",
+        },
+        {
+            "id": 3,
+            "operationAmount": {
+                "amount": "300.00",
+                "currency": {"code": "RUB"},
+            },
+            "description": "Перевод с карты на счет",
+        },
+        {
+            "id": 4,
+            "operationAmount": {
+                "amount": "400.00",
+                "currency": {"code": "RUB"},
+            },
+            "description": "Открытие вклада",
+        },
+    ]
