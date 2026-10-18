@@ -28,7 +28,7 @@ def sample_operations() -> list[dict[str, int | str]]:
 
 
 @pytest.fixture
-def sample_transactions() -> list[dict]:
+def sample_transactions() -> list[dict[str, object]]:
     return [
         {
             "id": 1,

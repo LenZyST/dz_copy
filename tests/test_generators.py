@@ -16,7 +16,7 @@ from src.generators import (
     ],
 )
 def test_filter_by_currency(
-    sample_transactions: list[dict],
+    sample_transactions: list[dict[str, object]],
     currency: str,
     expected_count: int,
 ) -> None:
@@ -27,7 +27,7 @@ def test_filter_by_currency(
 
 
 def test_filter_by_currency_iterator(
-    sample_transactions: list[dict],
+    sample_transactions: list[dict[str, object]],
 ) -> None:
     result = filter_by_currency(sample_transactions, "USD")
     assert next(result)["id"] == 1
@@ -37,7 +37,7 @@ def test_filter_by_currency_iterator(
 
 
 def test_transaction_descriptions(
-    sample_transactions: list[dict],
+    sample_transactions: list[dict[str, object]],
 ) -> None:
     result = list(transaction_descriptions(sample_transactions))
     assert result == [

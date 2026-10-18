@@ -53,6 +53,21 @@ csv_data = load_transactions_csv("data/transactions.csv")
 xlsx_data = load_transactions_excel("data/transactions_excel.xlsx")
 ```
 
+## Поиск по описанию
+
+```python
+from src.services import process_bank_search, process_bank_operations
+
+found = process_bank_search(data, "перевод")
+stats = process_bank_operations(data, ["Перевод организации", "Открытие вклада"])
+```
+
+## Запуск программы
+
+```bash
+poetry run python main.py
+```
+
 ## Логирование
 
 Модули `masks` и `utils` пишут логи в папку `logs/`.

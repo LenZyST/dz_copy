@@ -32,7 +32,7 @@ def test_log_error_console(capsys: pytest.CaptureFixture[str]) -> None:
         return x + y
 
     with pytest.raises(TypeError):
-        broken(1, "a")  # type: ignore[arg-type]
+        broken(1, "a")
 
     captured = capsys.readouterr()
     assert "broken error: TypeError" in captured.out
@@ -47,7 +47,7 @@ def test_log_error_file(tmp_path: Path) -> None:
         return x + y
 
     with pytest.raises(TypeError):
-        broken(1, "a")  # type: ignore[arg-type]
+        broken(1, "a")
 
     content = log_file.read_text(encoding="utf-8")
     assert "broken error: TypeError" in content

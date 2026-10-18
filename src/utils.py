@@ -45,7 +45,7 @@ def load_transactions_csv(file_path: str) -> list[dict[str, Any]]:
         return []
 
     logger.info("Загружено из CSV: %s", len(data))
-    return data
+    return list(data)
 
 
 def load_transactions_excel(file_path: str) -> list[dict[str, Any]]:
@@ -63,4 +63,4 @@ def load_transactions_excel(file_path: str) -> list[dict[str, Any]]:
         return []
 
     logger.info("Загружено из XLSX: %s", len(data))
-    return data
+    return list(data)
