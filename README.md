@@ -38,9 +38,20 @@ poetry run pytest --cov=src --cov-report=term-missing
 - `src/utils.py` — загрузка транзакций из JSON
 - `src/external_api.py` — конвертация валют через API
 - `src/logger_setup.py` — настройка логирования
-- `data/operations.json` — данные о транзакциях
+- `data/operations.json` — данные о транзакциях (JSON)
+- `data/transactions.csv` — данные о транзакциях (CSV)
+- `data/transactions_excel.xlsx` — данные о транзакциях (XLSX)
 - `logs/` — файлы логов (masks.log, utils.log)
 - `tests/` — тесты для всех функций
+
+## Чтение CSV и XLSX
+
+```python
+from src.utils import load_transactions_csv, load_transactions_excel
+
+csv_data = load_transactions_csv("data/transactions.csv")
+xlsx_data = load_transactions_excel("data/transactions_excel.xlsx")
+```
 
 ## Логирование
 
