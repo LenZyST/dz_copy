@@ -4,4 +4,9 @@ venv/
 .env
 .idea/
 .vscode
-.env
+.pytest_cache/
+.coverage
+.mypy_cache/
+logs/
+htmlcov/
+*.log
