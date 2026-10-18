@@ -37,8 +37,15 @@ poetry run pytest --cov=src --cov-report=term-missing
 - `src/decorators.py` — декоратор логирования
 - `src/utils.py` — загрузка транзакций из JSON
 - `src/external_api.py` — конвертация валют через API
+- `src/logger_setup.py` — настройка логирования
 - `data/operations.json` — данные о транзакциях
+- `logs/` — файлы логов (masks.log, utils.log)
 - `tests/` — тесты для всех функций
+
+## Логирование
+
+Модули `masks` и `utils` пишут логи в папку `logs/`.
+При каждом запуске файлы логов перезаписываются.
 
 ## Настройка API
 
